@@ -21,19 +21,18 @@ export const getStaticProps = async (context: any) => {
   }
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
+  const fetchData = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+  const data = await fetchData.json()
+
+  const paths = data.map((param: any) => {
+    return {
+      params: { practiceId: `${param.id}` },
+    }
+  })
+
   return {
-    paths: [
-      {
-        params: { practiceId: '1' },
-      },
-      {
-        params: { practiceId: '2' },
-      },
-      {
-        params: { practiceId: '3' },
-      },
-    ],
+    paths,
     fallback: false,
   }
 }
