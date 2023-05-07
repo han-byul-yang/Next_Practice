@@ -46,7 +46,11 @@ export const getStaticPaths = async () => {
   })
 
   return {
-    paths,
-    fallback: true,
+    paths: [
+      {
+        params: { practiceId: '1' },
+      },
+    ],
+    fallback: false,
   }
 }
