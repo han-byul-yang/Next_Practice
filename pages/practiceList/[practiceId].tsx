@@ -1,16 +1,8 @@
-import { useRouter } from 'next/router'
-
 interface IPractice {
   data: any
 }
 
 const Practice = ({ data }: IPractice) => {
-  const router = useRouter()
-
-  if (router.isFallback) {
-    return <div>loading...</div>
-  }
-
   return <div>{data.title}</div>
 }
 
@@ -50,7 +42,10 @@ export const getStaticPaths = async () => {
       {
         params: { practiceId: '1' },
       },
+      {
+        params: { practiceId: '2' },
+      },
     ],
-    fallback: false,
+    fallback: 'blocking',
   }
 }
