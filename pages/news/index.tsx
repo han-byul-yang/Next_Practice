@@ -7,9 +7,9 @@ const News = ({ newsData }: NewsProps) => {
     <>
       <div>News letter hello</div>
       <ul>
-        {newsData.map((news: any, i: number) => {
+        {newsData.map((news: any) => {
           return (
-            <li key={i}>
+            <li key={news.id}>
               {news.id} {news.title} {news.category}
             </li>
           )
