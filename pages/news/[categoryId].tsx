@@ -25,7 +25,15 @@ export default Category
 export const getServerSideProps = async (context: any) => {
   const {
     params: { categoryId },
+    req,
+    res,
+    query,
   } = context
+
+  console.log(req.headers.cookie)
+  res.setHeader('Set-Cookie', ['sally'])
+  console.log(query)
+
   const response = await fetch(`http://localhost:4000/news?category=${categoryId}`)
   const data = await response.json()
 
