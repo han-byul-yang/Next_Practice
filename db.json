@@ -1,4 +1,24 @@
 {
+  "news":  [
+    {
+      "id": 1,
+      "title": "NewsLetter 1",
+      "category": "art",
+      "description": "Description 1"
+    },
+    {
+      "id": 2,
+      "title": "NewsLetter 2",
+      "category": "sports",
+      "description": "Description 2"
+    },
+    {
+      "id": 3,
+      "title": "NewsLetter 3",
+      "category": "entertainment",
+      "description": "Description 3"
+    }
+  ],
   "products":  [
     {
       "id": 1,
