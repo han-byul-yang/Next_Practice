@@ -19,6 +19,9 @@ const Dashboard = () => {
       <div>{data.likes}</div>
       <div>{data.followers}</div>
       <div>{data.following}</div>
+      <button className='btn btn-primary' type='button'>
+        button
+      </button>
     </>
   )
 }
