@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import { ReactElement, ReactNode } from 'react'
 
 import Header from '../components/Header'
@@ -21,6 +22,10 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     Component.getLayout ??
     (() => (
       <>
+        <Head>
+          <title>app title</title>
+          <meta name='description' content='app description' />
+        </Head>
         <Header />
         <Component {...pageProps} />
         <Footer />
