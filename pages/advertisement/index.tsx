@@ -2,9 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Fragment, ReactElement } from 'react'
 
-import Header from '../../components/Header'
+// eslint-disable-next-line import/extensions
+import Header from '@/layout/Header/index'
 
-import firstImg from '../../public/1.jpg'
+import firstImg from 'public/1.jpg'
 
 const Advertisement = () => {
   return (

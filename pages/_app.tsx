@@ -3,10 +3,10 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ReactElement, ReactNode } from 'react'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from 'components/layout/Header'
+import Footer from 'components/layout/Footer'
 
-import '../styles/globals.css'
+import 'styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
