@@ -4,6 +4,8 @@ import { Fragment, ReactElement } from 'react'
 
 import Header from '../../components/Header'
 
+import firstImg from '../../public/1.jpg'
+
 const Advertisement = () => {
   return (
     <>
@@ -12,6 +14,7 @@ const Advertisement = () => {
         <meta name='description' content='advertisement description' />
       </Head>
       <div>advertisement</div>
+      <Image src={firstImg} alt='1-img' placeholder='blur' width='280' height='320' />
       {[1, 2, 3, 4, 5, 6].map((img) => {
         return (
           <Fragment key={img}>
